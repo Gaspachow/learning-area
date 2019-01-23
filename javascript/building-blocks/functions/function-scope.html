@@ -7,18 +7,20 @@
 <body>
   
   <script>
-    var x = 1;
+    let x = 1;
 
     function a() {
-      var y = 2;
+      let y = 2;
+      output(x)
     }
 
     function b() {
-      var z = 3;
+      let z = 3;
+      output(z)
     }
 
     function output(value) {
-      var para = document.createElement('p');
+      let para = document.createElement('p');
       document.body.appendChild(para);
       para.textContent = 'Value: ' + value;
     }

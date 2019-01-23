@@ -19,6 +19,54 @@
     var input = document.querySelector('.numberInput');
     var para = document.querySelector('p');
 
+    function squared(num) {
+      return num * num;
+    }
+
+    function cubed(num) {
+      return num * num * num;
+    }
+
+    function factorial(num) {
+      let x = num;
+      while (x > 1) {
+        num *= x-1;
+        x--;
+      }
+      return num;
+    }
+
+    function div75(num) {
+      return num / 75;
+    }
+
+    function compare10(num) {
+      if (num>10) {
+        return "bigger than 10";
+      }
+      else if (num<10) {
+        return "smaller than 10";
+      }
+      else {
+        return "equal to 10"
+      }
+    }
+
+    input.onchange = function() {
+      let num = input.value;
+      if (isNaN(num)) {
+        para.textContent = 'You need to enter a number.';
+      } else {
+        para.innerHTML = 'The square of ' + num + ' is ' + squared(num) + '. ' + "<br />" +
+                           'The cube of ' + num + ' is ' + cubed(num) + '. ' + "<br />" +
+                           'The factorial of ' + num + ' is ' + factorial(num) + '. ' + "<br />" +
+                           num + ' divided by 42 is ' + div75(num) + "<br />" +
+                           num + ' is ' + compare10(num) + '.';
+      }
+    }
+
+
+
   </script>
 </body>
 </html>
